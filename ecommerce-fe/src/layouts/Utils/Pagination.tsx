@@ -5,7 +5,7 @@ export const Pagination: React.FC<{
   totalPages: number;
   paginate: any;
 }> = (props) => {
-  const pageNumbers = [];
+  const pageNumbers: any = [];
 
   if (props.currentPage === 1) {
     pageNumbers.push(props.currentPage);
@@ -39,7 +39,7 @@ export const Pagination: React.FC<{
         <li className="page-item" onClick={() => props.paginate(1)}>
           <button className="page-link">First page</button>
         </li>
-        {pageNumbers.map((number) => (
+        {pageNumbers.map((number: any) => (
           <li
             key={number}
             onClick={() => props.paginate(number)}
